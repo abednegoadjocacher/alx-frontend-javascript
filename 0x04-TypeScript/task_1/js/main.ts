@@ -29,3 +29,15 @@ const director1: Director = {
   numberOfReports: 17,
 };
 console.log(director1);
+
+/**
+ * A function printTeacher that takes two parameters firstName and lastName
+ * @param firstName - First name of the teacher
+ * @param lastName - Last name of the teacher
+ * @return - The first letter of the firstName and the full lastName
+ */
+
+function printTeacher(firstName: string, lastName: string): string {
+  return firstName[0] + '. ' + lastName;
+}
+console.log(printTeacher('John', 'Doe'));
