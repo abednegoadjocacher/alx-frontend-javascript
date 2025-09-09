@@ -37,12 +37,15 @@ console.log(director1);
  * @return - The first letter of the firstName and the full lastName
  */
 
-function printTeacher(firstName: string, lastName: string): string {
-  return firstName[0] + '. ' + lastName;
-}
-console.log(printTeacher('John', 'Doe'));
+// function printTeacher(firstName: string, lastName: string): string {
+//   return firstName[0] + '. ' + lastName;
+// }
+// console.log(printTeacher('John', 'Doe'));
 
 //Write an interface for the function named printTeacherFunction
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
