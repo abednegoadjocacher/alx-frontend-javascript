@@ -41,3 +41,8 @@ function printTeacher(firstName: string, lastName: string): string {
   return firstName[0] + '. ' + lastName;
 }
 console.log(printTeacher('John', 'Doe'));
+
+//Write an interface for the function named printTeacherFunction
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
