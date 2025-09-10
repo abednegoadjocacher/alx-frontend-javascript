@@ -31,7 +31,8 @@ const director1: Director = {
 console.log(director1);
 
 function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName.charAt(0)}. ${lastName}`;
+  let firstLetter: string = firstName[0];
+  return `${firstLetter}. ${lastName}`;
 }
 console.log(printTeacher('John', 'Doe'));
 
