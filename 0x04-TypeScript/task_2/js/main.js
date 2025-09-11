@@ -27,8 +27,10 @@ var Teacher = /** @class */ (function () {
     return Teacher;
 }());
 function createEmployee(salary) {
-    if (typeof salary === 'number' && salary < 500) {
-        return new Teacher();
+    if (typeof salary === 'number') {
+        if (salary < 500) {
+            return new Teacher();
+        }
     }
     else {
         return new Director();
@@ -37,3 +39,19 @@ function createEmployee(salary) {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+function isDirector(employee) {
+    return employee instanceof Director;
+}
+function executeWork(employee) {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    }
+    else {
+        return employee.workTeacherTasks();
+    }
+}
+console.log(executeWork(createEmployee(200)));
+console.log(executeWork(createEmployee(1000)));
+console.log(executeWork(createEmployee('$500')));
+executeWork(createEmployee(200));
+executeWork(createEmployee(1000));
