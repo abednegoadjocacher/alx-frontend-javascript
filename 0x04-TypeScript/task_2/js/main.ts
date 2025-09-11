@@ -50,7 +50,7 @@ console.log(createEmployee('$500'));
 type Subjects = "Math" | "History"
 
 // Function definition
-export function teachClass(todayClass: Subjects): string {
+export function teachClass(todayClass:Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math"
   }
