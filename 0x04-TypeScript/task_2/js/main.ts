@@ -46,13 +46,17 @@ console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
 
 
-type Subjects = "Math" | "History";
+// String literal type
+type Subjects = "Math" | "History"
 
-function teachClass(todayClass: Subjects): string {
+// Function definition
+export function teachClass(todayClass: Subjects): string {
   if (todayClass === "Math") {
-    return "Teaching Math";
+    return "Teaching Math"
   }
-  return "Teaching History";
+  return "Teaching History"
 }
+
+
 console.log(teachClass("Math"));
 console.log(teachClass("History"));

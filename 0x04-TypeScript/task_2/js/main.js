@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.teachClass = teachClass;
 var Director = /** @class */ (function () {
     function Director() {
     }
@@ -39,6 +42,7 @@ function createEmployee(salary) {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+// Function definition
 function teachClass(todayClass) {
     if (todayClass === "Math") {
         return "Teaching Math";
