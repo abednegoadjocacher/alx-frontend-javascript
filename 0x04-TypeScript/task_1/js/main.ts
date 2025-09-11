@@ -31,7 +31,7 @@ const director1: Director = {
 console.log(director1);
 
 interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+  ({firstName, lastName}: { firstName: string, lastName: string}): string;
 }
 
 function printTeacher({firstName, lastName}: {firstName: string; lastName: string}): string {
