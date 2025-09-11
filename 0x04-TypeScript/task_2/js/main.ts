@@ -45,10 +45,10 @@ console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
 
-function  isDirector(employee: Director | Teacher): employee is Director {
-  return employee instanceof Director;
+function isDirector(employee: Director | Teacher): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined;
 }
-function executeWork(employee: Director | Teacher): string {
+function executeWork(employee: Director | Teacher) {
   if (isDirector(employee)) {
     return employee.workDirectorTasks();
   } else {
