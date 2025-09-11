@@ -31,13 +31,14 @@ const director1: Director = {
 console.log(director1);
 
 interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+  firstName: string,
+  lastName: string,
 }
 // const printTeacher: printTeacherFunction = (firstName, lastName) => {
   //   return `${firstName.charAt(0)}. ${lastName}`;
   // };
-  function printTeacher(firstName: string, lastName: string): string {
-    let firstLetter: string = firstName[0];
-    return `${firstLetter}. ${lastName}`;
+  function printTeacher(teachFullName: printTeacherFunction): string {
+    return `${teachFullName.firstName[0]}. ${teachFullName.lastName}`;
   }
-  console.log(printTeacher('John', 'Doe'));
+  console.log(printTeacher({ firstName: 'John', lastName: 'Doe' }));
+
