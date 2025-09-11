@@ -43,7 +43,7 @@ function printTeacher({ firstName, lastName }: { firstName: string; lastName: st
 console.log(printTeacher({ firstName: 'John', lastName: 'Doe' }));
 
 //Create a class for students
-class StudentClass{
+class StudentClass {
   firstName: string;
   lastName: string;
   constructor(firstName: string, lastName: string) {
@@ -56,5 +56,5 @@ class StudentClass{
   displayName(): string {
     return this.firstName;
   }
-  
+
 }
