@@ -42,14 +42,15 @@ console.log(director1);
   // }
   // console.log(printTeacher({ firstName: 'John', lastName: 'Doe' }));
 
+// Interface definition
 interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+  (teacher: { firstName: string; lastName: string }): string;
 }
 
 // Function implementation
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
+const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
 // Test
-console.log(printTeacher("John", "Doe"));
+console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
