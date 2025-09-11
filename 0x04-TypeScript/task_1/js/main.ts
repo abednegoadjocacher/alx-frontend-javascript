@@ -38,17 +38,3 @@ function printTeacher({firstName, lastName}: {firstName: string, lastName: strin
     return `${firstName[0]}. ${lastName}`;
    }
    console.log(printTeacher({ firstName: 'John', lastName: 'Doe' }));
-
-// Interface definition
-// interface printTeacherFunction {
-//   (teacher: { firstName: string; lastName: string }): string;
-// }
-
-// // Function implementation
-// const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
-//   firstName = firstName.charAt(0);
-//   return `${firstName}. ${lastName}`;
-// };
-
-// // Test
-// console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
